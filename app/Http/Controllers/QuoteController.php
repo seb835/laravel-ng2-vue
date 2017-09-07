@@ -28,7 +28,7 @@ class QuoteController extends Controller
         $quote = Quote::find($id);
 
         if (!$quote) {
-            return response()->json(['message' => 'Document not found'], 404);
+            return response()->json(['message' => 'Quote not found'], 404);
         }
 
         $quote->content = $request->content;
